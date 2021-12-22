@@ -31,7 +31,7 @@ public class BeerDTO {
 
     @NotNull
     @Size(min =1, max = 200)
-    private String nome;
+    private String name;
 
     @NotNull
     @Max(100)

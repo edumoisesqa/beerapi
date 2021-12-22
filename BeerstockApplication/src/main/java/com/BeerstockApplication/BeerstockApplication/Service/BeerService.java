@@ -24,7 +24,7 @@ public class BeerService {
     private final BeerMapper beerMapper = BeerMapper.INSTANCE;
 
     public BeerDTO createBeer(BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
-        verifyIfIsAlreadyRegistered(beerDTO.getNome());
+        verifyIfIsAlreadyRegistered(beerDTO.getName());
         Beer beer = beerMapper.toModel(beerDTO);
         Beer savedBeer = beerRepository.save(beer);
         return beerMapper.toDTO(savedBeer);
